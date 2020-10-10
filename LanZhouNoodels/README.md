@@ -1,1 +1,1 @@
-## Ô´ÎÄ¼þgithub.com/yaduo/lanzhouBeefNoodles
+## https://github.com/yaduo/lanzhouBeefNoodles
