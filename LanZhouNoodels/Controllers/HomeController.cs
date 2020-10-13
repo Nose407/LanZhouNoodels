@@ -28,9 +28,14 @@ namespace LanZhouNoodels.Controllers
             };
             return View(viewModel);
         }
-        //[Route("aboutus")]
+        //[Route("aboutus")]HomeController1.cs
         public String About() {
             return "this is About";
+        }
+
+        public IActionResult Detail(int id)
+        {
+            return View(_noodleRepository.GetNoodleById(id));
         }
     }
 }

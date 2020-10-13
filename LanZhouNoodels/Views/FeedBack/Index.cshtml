@@ -1,0 +1,40 @@
+﻿@model LanZhouNoodels.Models.FeedBack
+@addTagHelper  *,Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<h1>评价页面</h1>
+
+<form asp-action="Index" method="post" role="form">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="form-group">
+        <label asp-for="Name" class="col-md-2 control-label">姓名</label>
+        <div class="col-md-5">
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="Email" class="col-md-2 control-label">Email</label>
+        <div class="col-md-5">
+            <input asp-for="Email" class="form-control" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="Message" class="col-md-2 control-label">反馈意见</label>
+        <div class="col-md-5">
+            <input asp-for="Message" class="form-control" />
+            <span asp-validation-for="Message" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-5">
+            <button type="submit" class="btn btn-primary">提交意见</button>
+        </div>
+    </div>
+
+</form>

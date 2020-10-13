@@ -8,5 +8,6 @@ namespace LanZhouNoodels.Models
     public interface IFeedBackRepository
     {
         IEnumerable<FeedBack> GetFeedBacks();
+        void AddFeedBack(FeedBack feedBack);
     }
 }

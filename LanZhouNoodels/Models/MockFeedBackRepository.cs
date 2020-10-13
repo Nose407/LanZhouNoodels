@@ -15,17 +15,21 @@ namespace LanZhouNoodels.Models
         }
         private void Initialization() {
             _feedBacks = new List<FeedBack> {
-                new FeedBack { Id=1 , Name="反馈1",Email="feedback@163.com",CreateDateUtc=DateTime.Now,Message="信息1"},
-                new FeedBack { Id=2 , Name="反馈1",Email="feedback@163.com",CreateDateUtc=DateTime.Now,Message="信息1"},
-                new FeedBack { Id=3 , Name="反馈1",Email="feedback@163.com",CreateDateUtc=DateTime.Now,Message="信息1"},
-                new FeedBack { Id=4 , Name="反馈1",Email="feedback@163.com",CreateDateUtc=DateTime.Now,Message="信息1"},
-                new FeedBack { Id=5 , Name="反馈1",Email="feedback@163.com",CreateDateUtc=DateTime.Now,Message="信息1"},
-                new FeedBack { Id=6 , Name="反馈1",Email="feedback@163.com",CreateDateUtc=DateTime.Now,Message="信息1"},
+                new FeedBack { Id=1 , Name="反馈1",Email="feedback@163.com",CreateDateUtc=DateTime.UtcNow,Message="信息1"},
+                new FeedBack { Id=2 , Name="反馈1",Email="feedback@163.com",CreateDateUtc=DateTime.UtcNow,Message="信息1"},
+                new FeedBack { Id=3 , Name="反馈1",Email="feedback@163.com",CreateDateUtc=DateTime.UtcNow,Message="信息1"},
+                new FeedBack { Id=4 , Name="反馈1",Email="feedback@163.com",CreateDateUtc=DateTime.UtcNow,Message="信息1"},
+                new FeedBack { Id=5 , Name="反馈1",Email="feedback@163.com",CreateDateUtc=DateTime.UtcNow,Message="信息1"},
+                new FeedBack { Id=6 , Name="反馈1",Email="feedback@163.com",CreateDateUtc=DateTime.UtcNow,Message="信息1"},
             };
         }
         public IEnumerable<FeedBack> GetFeedBacks()
         {
             return _feedBacks;
+        }
+        public void AddFeedBack(FeedBack feedBack)
+        {
+            _feedBacks.Add(feedBack);
         }
     }
 }

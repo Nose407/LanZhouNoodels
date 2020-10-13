@@ -13,5 +13,6 @@ namespace LanZhouNoodels.Models
         public string LongDescription { get; set; }
         public decimal Price { get; set; }
         public string ImgUrl { get; set; }
+        public bool IsInStock { get; set; }
     }
 }

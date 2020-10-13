@@ -1,0 +1,23 @@
+﻿@model LanZhouNoodleCJ.ViewModles.HomeViewModle;
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>菜品</h1>
+
+@foreach (var item in Model.Noodles)
+{
+    <div>@item.ImgUrl</div>
+    <h2>@item.Name</h2>
+    <h3>@item.Introduce</h3>
+    <div>@item.CreateTime</div>
+}
+
+<h1>评论</h1>
+
+@foreach (var item in Model.FeedBacks)
+{
+    <h2>@item.Name</h2>
+    <h3>@item.Content</h3>
+    <div>@item.CreateTime</div>
+}
